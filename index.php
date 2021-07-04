@@ -14,16 +14,32 @@
 
 
 <body>
-    <div class="form" action="addTodo.php">
+    <div class="form" action="addtodo.php">
         <form action="">
             <label for="creator">Creator: </label><br>
             <input type="text" placeholder="Ex. David"><br>
 
-            <label for="todo">Todo: </label><br>
+            <label for="creator">Title: </label><br>
+            <input type="text"><br>
+
+            <label for="todo">Description: </label><br>
             <textarea name="todo" id="todo"></textarea><br>
 
             <button>SUBMIT</button>
         </form>
+    </div>
+
+    <div class="todos">
+        <div class="todo">
+            <h2>Todo</h2>
+            <h4>Added by: Creator</h4>
+            <p>Description</p>
+            <button class="del-btn">DELETE</button>
+            <div class="panel">
+                <label for="checked">Done: </label>
+                <input type="checkbox">
+            </div>
+        </div>
     </div>
 </body>
 
