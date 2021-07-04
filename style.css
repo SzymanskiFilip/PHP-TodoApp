@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Otomanopee One", sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+input {
+  width: 250px;
+  height: 20px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 250px;
+  height: 20px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #00c853;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: whitesmoke;
+}
+
+button:hover {
+  box-shadow: 0px 0px 10px rgb(114, 107, 107);
+}
