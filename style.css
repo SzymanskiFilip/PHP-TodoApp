@@ -67,6 +67,15 @@ button:hover {
 
 .todo {
   text-align: center;
+  padding: 20px;
+  background-color: #00c853;
+  width: 300px;
+  min-height: 300px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 input[type="checkbox"] {
