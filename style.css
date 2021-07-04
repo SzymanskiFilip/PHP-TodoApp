@@ -76,12 +76,14 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 0 10px rgb(110, 101, 101);
 }
 
 input[type="checkbox"] {
   margin: 5px;
   padding: 0;
   width: 20px;
+  cursor: pointer;
 }
 
 .panel {
