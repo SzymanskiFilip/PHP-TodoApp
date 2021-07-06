@@ -49,13 +49,6 @@ button:hover {
   cursor: pointer;
 }
 
-.todos {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .del-btn {
   margin: 5px;
   background-color: #d41818;
@@ -65,7 +58,15 @@ button:hover {
   background-color: #d50000;
 }
 
+.todos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .todo {
+  margin-top: 50px;
   text-align: center;
   padding: 20px;
   background-color: #00c853;
@@ -77,18 +78,4 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px rgb(110, 101, 101);
-}
-
-input[type="checkbox"] {
-  margin: 5px;
-  padding: 0;
-  width: 20px;
-  cursor: pointer;
-}
-
-.panel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
