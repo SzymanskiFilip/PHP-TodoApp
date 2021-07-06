@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Otomanopee One", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .form {
@@ -37,11 +37,12 @@ input:focus {
 
 button {
   padding: 10px;
-  background-color: #00c853;
+  background-color: #0091ea;
   border: none;
   border-radius: 5px;
   transition: 0.3s;
-  color: whitesmoke;
+  color: white;
+  font-weight: bold;
 }
 
 button:hover {
@@ -69,13 +70,20 @@ button:hover {
   margin-top: 50px;
   text-align: center;
   padding: 20px;
-  background-color: #00c853;
   width: 300px;
   min-height: 300px;
   border-radius: 10px;
 
+  color: white;
+  background-color: #0091ea;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 10px rgb(110, 101, 101);
+  box-shadow: 0 0 10px #3995ce;
+}
+
+.title,
+.creator {
+  margin-bottom: 10px;
 }
