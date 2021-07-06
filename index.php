@@ -47,7 +47,10 @@ $todos = json_decode(file_get_contents('./todos.json'), true);
                 <h2><?php echo $todos[$i]["title"] ?></h2>
                 <h4>Added by: <?php echo $todos[$i]["creator"] ?></h4>
                 <p><?php echo $todos[$i]["description"] ?></p>
-                <button class="del-btn">DELETE</button>
+                <form method="post" action="deletetodo.php">
+                    <input type="hidden" name="todo_id" value="<?php echo $i ?>">
+                    <button class="del-btn">DELETE</button>
+                </form>
             </div>
 
 
