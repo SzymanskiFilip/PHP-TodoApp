@@ -12,11 +12,12 @@ $todos = json_decode(file_get_contents('./todos.json'), true);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Todo App</title>
+</head>
 </head>
 
 
@@ -44,9 +45,12 @@ $todos = json_decode(file_get_contents('./todos.json'), true);
         ?>
 
             <div class="todo">
-                <h2><?php echo $todos[$i]["title"] ?></h2>
-                <h4>Added by: <?php echo $todos[$i]["creator"] ?></h4>
-                <p><?php echo $todos[$i]["description"] ?></p>
+                <div class="todo-content">
+                    <h2 class="title"><?php echo $todos[$i]["title"] ?></h2>
+                    <h4 class="creator">Added by: <?php echo $todos[$i]["creator"] ?></h4>
+                    <p class="description"><?php echo $todos[$i]["description"] ?></p>
+                </div>
+
                 <form method="post" action="deletetodo.php">
                     <input type="hidden" name="todo_id" value="<?php echo $i ?>">
                     <button class="del-btn">DELETE</button>
