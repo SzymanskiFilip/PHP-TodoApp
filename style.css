@@ -87,3 +87,20 @@ button:hover {
 .creator {
   margin-bottom: 10px;
 }
+
+.back {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #3995ce;
+}

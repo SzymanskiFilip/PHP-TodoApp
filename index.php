@@ -22,6 +22,10 @@ $todos = json_decode(file_get_contents('./todos.json'), true);
 
 
 <body>
+    <div class="back">
+        <h1><a href="http://filipszymanski.eu/">Back to the main site!</a></h1>
+    </div>
+
     <div class="form">
         <form method="post" action="addtodo.php">
             <label>Creator: </label><br>
