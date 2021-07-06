@@ -1,3 +1,10 @@
+<?php
+
+$todos = json_decode(file_get_contents('./todos.json'), true);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,33 +21,42 @@
 
 
 <body>
-    <div class="form" action="addtodo.php">
-        <form action="">
-            <label for="creator">Creator: </label><br>
-            <input type="text" placeholder="Ex. David"><br>
+    <div class="form">
+        <form method="post" action="addtodo.php">
+            <label>Creator: </label><br>
+            <input name="creator" type="text" placeholder="Ex. David"><br>
 
-            <label for="creator">Title: </label><br>
-            <input type="text"><br>
+            <label>Title: </label><br>
+            <input name="title" type="text"><br>
 
-            <label for="todo">Description: </label><br>
+            <label>Description: </label><br>
             <textarea name="todo" id="todo"></textarea><br>
 
-            <button>SUBMIT</button>
+            <button name="submit">SUBMIT</button>
         </form>
     </div>
 
     <div class="todos">
-        <div class="todo">
-            <h2>Todo</h2>
-            <h4>Added by: Creator</h4>
-            <p>Description</p>
-            <button class="del-btn">DELETE</button>
-            <div class="panel">
-                <label for="checked">Done: </label>
-                <input type="checkbox">
+
+        <?php
+
+        for ($i = 0; $i < count($todos); $i++) {
+        ?>
+
+            <div class="todo">
+                <h2><?php echo $todos[$i]["title"] ?></h2>
+                <h4>Added by: <?php echo $todos[$i]["creator"] ?></h4>
+                <p><?php echo $todos[$i]["description"] ?></p>
+                <button class="del-btn">DELETE</button>
             </div>
-        </div>
+
+
+        <?php
+        }
+
+        ?>
     </div>
+
 </body>
 
 </html>
