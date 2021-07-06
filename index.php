@@ -30,7 +30,7 @@ $todos = json_decode(file_get_contents('./todos.json'), true);
             <input name="title" type="text"><br>
 
             <label>Description: </label><br>
-            <textarea name="todo" id="todo"></textarea><br>
+            <textarea name="description" id="todo"></textarea><br>
 
             <button name="submit">SUBMIT</button>
         </form>
